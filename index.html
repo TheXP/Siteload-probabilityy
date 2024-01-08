@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Button Example</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: black;
+    }
+    button {
+      font-size: 12px;
+      background-color: gray; /* Change the background color to gray */
+      color: lightgray; /* Change the text color to light gray */
+      padding: 8px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: 600;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="openNewTab()">visit Siteload</button>
+  <button onclick="openBlankTab()">Open probabilityy</button>
+  <script>
+    function openNewTab() {
+      window.open('https://sites.google.com/view/siteload-main/home', '_blank');
+    }
+
+    function openBlankTab() {
+      var win = window.open('about:blank', '_blank');
+      win.document.body.style.margin = '0';
+      win.document.body.style.height = '100vh';
+      var iframe = win.document.createElement('iframe');
+      iframe.style.border = 'none';
+      iframe.style.width = '100%';
+      iframe.style.height = '100%';
+      iframe.style.margin = '0';
+      iframe.src = 'https://probability.xn--fiqp3jtxe9n0a37aj1cr63a7x9c.tm';
+      win.document.body.appendChild(iframe);
+    }
+  </script>
+</body>
+</html>
